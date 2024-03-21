@@ -7,8 +7,8 @@ lukemaan 2090 km."""
 
 
 class Car:
-    def __init__(self, registration_number, top_speed, current_speed, distance):
-        self.registration = registration_number
+    def __init__(self, license_plate, top_speed, current_speed, distance):
+        self.plate = license_plate
         self.top_speed = top_speed
         self.current_speed = current_speed
         self.distance = distance
@@ -20,7 +20,7 @@ class Car:
         self.distance += hours * self.current_speed
 
     def print_info(self):
-        print(f"Registration: {self.registration}\nTop speed: {self.top_speed}km/h\n"
+        print(f"License plate: {self.plate}\nTop speed: {self.top_speed}km/h\n"
               f"Current speed: {self.current_speed}km/h\nDistance: {self.distance}km")
 
 
