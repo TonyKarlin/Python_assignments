@@ -28,7 +28,7 @@ class Car:
 
     def print_info(self):
         print(f"Registration: {self.registration}\nTop speed: {self.top_speed} km/h\n"
-              f"Current speed: {self.current_speed} km/h\nDistance: {self.distance} km")
+              f"Current speed: {self.current_speed} km/h\nDistance: {self.distance} km\n")
 
 
 cars = []
@@ -52,4 +52,4 @@ while True:
 
 for car in cars:
     car.print_info()
-    print()
+
