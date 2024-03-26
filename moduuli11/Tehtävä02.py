@@ -14,13 +14,11 @@ kolmen tunnin verran ja tulosta autojen matkamittarilukemat."""
 def main():
     drive = Race("Evening drive", 8000, 2)
 
-    while True:
-        for hour in range(3):
-            drive.hour_passes()
+    for hour in range(3):
+        drive.hour_passes()
 
-        for car in drive.cars:
-            car.print_info()
-        break
+    for car in drive.cars:
+        car.print_info()
 
 
 class Car:
