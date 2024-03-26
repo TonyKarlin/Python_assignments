@@ -21,6 +21,7 @@ def main():
         car.print_info()
 
 
+
 class Car:
     def __init__(self, license_plate, top_speed, current_speed, distance):
         self.plate = license_plate
@@ -35,8 +36,12 @@ class Car:
         self.distance += hours * self.current_speed
 
     def print_info(self):
-        print(f"License plate: {self.plate}\nTop speed: {self.top_speed} km/h\n"
-              f"Current speed: {self.current_speed} km/h\nDistance: {self.distance} km\n")
+        if isinstance(self, ElectricCar):
+            print(f"ELECTRIC CAR")
+        elif isinstance(self, GasolineCar):
+            print(f"GASOLINE CAR")
+        print(f"License plate: {self.plate}\nCurrent speed: {self.current_speed} km/h, "
+              f"Top speed: {self.top_speed} km/h\nDistance: {self.distance} km\n")
 
 
 class ElectricCar(Car):
