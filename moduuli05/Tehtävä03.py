@@ -9,15 +9,13 @@ Toisaalta esimerkiksi luku 21 ei ole alkuluku, koska se voidaan jakaa tasan myö
 
 integer = int(input("Please input a number: "))
 
-if integer > 1:
+if integer >= 1:
     prime = True
     for i in range(2, integer):
         if (integer % i) == 0:
             prime = False
             break
-
-    if prime == True:
+    if prime:
         print(f"{integer} is a prime number.")
     else:
         print(f"{integer} is a composite number.")
-
